@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { CreateDeliveryManUseCase } from "./create_deliveryman_usecase";
 
 
-export class CreateDeliveryManController {
+export class CreateDeliverymanController {
     async handle(request: Request, response: Response){
         const { username, password } = request.body;
 
