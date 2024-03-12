@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { AuthenticateUserUseCase } from "./authenticate_client_use_case";
+import { AuthenticateClientUseCase } from "./authenticate_client_use_case";
 
 
 export class AuthenticateClientController {
@@ -7,7 +7,7 @@ export class AuthenticateClientController {
         const { username, password } = request.body;
         console.log(request.body);
         
-        const createClientUseCase = new AuthenticateUserUseCase()
+        const createClientUseCase = new AuthenticateClientUseCase()
         const result = await createClientUseCase.execute({
             username, password
         })
