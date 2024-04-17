@@ -12,6 +12,7 @@ export class CreateDeliveryManUseCase {
             where:
             {
                 username : {
+                    equals: username,
                     mode: "insensitive"
                 }
             }
